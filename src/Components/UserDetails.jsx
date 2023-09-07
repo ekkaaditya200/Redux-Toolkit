@@ -1,5 +1,5 @@
 import React from "react";
-// import { DeleteAllUser } from "./DeleteAllUser";
+import { DeleteAllUser } from "./DeleteAllUser";
 import styled from "styled-components";
 
 const UserDetails = () => {
@@ -15,7 +15,7 @@ const UserDetails = () => {
           <li>Hii</li> */}
         </ul>
         <hr />
-        {/* <DeleteAllUser /> */}
+        <DeleteAllUser />
       </div>
     </Wrapper>
   );
