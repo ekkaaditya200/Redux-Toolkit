@@ -1,0 +1,13 @@
+.btn-delete{
+    width: 60px;
+    height: 30px;
+    background-color: rgb(222, 174, 174);
+    border: none;
+    border-radius: 20px;
+}
+li{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
