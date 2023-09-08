@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, legacy_createStore } from "@reduxjs/toolkit";
 
 const userSlice = createSlice({
     name:"user",
@@ -9,9 +9,19 @@ const userSlice = createSlice({
             state.push(action.payload);
             console.log(action.payload);
         }, 
-        removeUser(state,action){},
+        removeUser(state,action){
+
+            // splice() method in javascript is used to modify an array by adding or removing elements
+
+            state.splice(action.payload,1);
+            console.log("Deleted");
+
+            //Delete from last
+            // state.pop();
+
+        },
         deleteUsers(state,action){},
     },
 });
 export default userSlice.reducer;
-export const {addUser} = userSlice.actions;
+export const {addUser,removeUser} = userSlice.actions;
