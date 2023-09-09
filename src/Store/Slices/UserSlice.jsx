@@ -1,4 +1,4 @@
-import { createSlice, legacy_createStore } from "@reduxjs/toolkit";
+import { createSlice} from "@reduxjs/toolkit";
 
 const userSlice = createSlice({
     name:"user",
@@ -20,8 +20,14 @@ const userSlice = createSlice({
             // state.pop();
 
         },
-        deleteUsers(state,action){},
+        deleteUsers(state,action){
+            //state is reasigning 
+            // return state = [];
+
+            //all items are deleted
+            return [];
+        },
     },
 });
 export default userSlice.reducer;
-export const {addUser,removeUser} = userSlice.actions;
+export const {addUser,removeUser,deleteUsers} = userSlice.actions;
