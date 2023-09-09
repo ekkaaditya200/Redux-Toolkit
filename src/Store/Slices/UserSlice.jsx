@@ -1,4 +1,5 @@
 import { createSlice} from "@reduxjs/toolkit";
+import { deleteUsers } from "../actions";
 
 const userSlice = createSlice({
     name:"user",
@@ -20,14 +21,16 @@ const userSlice = createSlice({
             // state.pop();
 
         },
-        deleteUsers(state,action){
-            //state is reasigning 
-            // return state = [];
-
-            //all items are deleted
-            return [];
-        },
     },
+    extraReducers(builder){
+        builder.addCase(deleteUsers,()=>{
+            return [];
+        })
+    }
 });
+/*
+TODO: If actions is supposed to be handled by one reducer, use reducers
+TODO: If action is supposed to be handled by multiple reducers, use extraReducers
+*/
 export default userSlice.reducer;
-export const {addUser,removeUser,deleteUsers} = userSlice.actions;
+export const {addUser,removeUser} = userSlice.actions;
