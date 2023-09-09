@@ -6,6 +6,8 @@ import { useDispatch } from "react-redux";
 import { addUser } from "../Store/Slices/UserSlice";
 import DisplayUsers from "./DisplayUsers";
 const UserDetails = () => {
+
+  //dispatch is used to send the data or action to the store micro reducers which then store the data
   const dispatch = useDispatch();
 
   const addNewUser=(payload)=>{
@@ -20,7 +22,6 @@ const UserDetails = () => {
         </div>
         <ul>
           <DisplayUsers/>
-          <li>Hello</li>
         </ul>
         <hr />
         <DeleteAllUser />
